@@ -1,0 +1,7 @@
+s=[]
+for i in open("input.txt","r"):
+    s=s+i
+f=open("output.txt","w"):
+    s.sort()
+    f.write(s)
+    f.close()
