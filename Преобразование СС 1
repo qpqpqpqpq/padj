@@ -1,0 +1,25 @@
+def change8(a):
+    a=float(a)
+    a1=int(a)
+    a2=a%1
+    ot=("")
+    while a1>8:
+        d=a1%8
+        a1=a1//8
+        ot=ot+str(d)
+    ot=ot+str(a1)
+    ot=ot[::-1]
+    ot=ot+","
+    for i in range(3):
+        a2=a2*8
+    if a2>1:
+        d=a2//1
+        a2=a2%1
+        ot=ot+str(d)
+    else:
+        ot=ot+str(0)
+    return(ot)
+
+ja=input()
+a=change8(ja)
+print(a)
