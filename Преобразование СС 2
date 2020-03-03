@@ -1,0 +1,52 @@
+def changeX(a,x):
+    if x<10:
+        a=float(a)
+        a1=int(a)
+        a2=a%1
+        ot=("")
+        while a1>x:
+            d=a1%x
+            a1=a1//x
+            ot=ot+str(d)
+        ot=ot+str(a1)
+        ot=ot[::-1]
+        ot=ot+","
+        for i in range(3):
+            a2=a2*x
+            if a2>1:
+                d=a2//1
+                a2=a2%1
+                ot=ot+str(d)
+            else:
+                ot=ot+str(0)
+        return(ot,0)
+    else:
+        a=float(a)
+        a1=int(a)
+        a2=a%1
+        ot=("")
+        while a1>x:
+            d=a1%x
+            if d>=10:
+                if d==10:
+                    d="A"
+                elif d==11:
+                    d="B"
+                elif d==12:
+                    d="C"
+                elif d==13:
+                    d="D"
+                elif d==14:
+                    d="E"
+                else:
+                    d="F"
+            a1=a1//x
+            ot=ot+str(d)
+        ot=ot+str(a1)
+        ot=ot[::-1]
+        return(ot,0)
+
+ja=input()
+jx=int(input())
+a,x=changeX(ja,jx)
+print(a)
