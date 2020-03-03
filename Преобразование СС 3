@@ -1,0 +1,36 @@
+def rchange(a,x):
+    if x<10:
+        a=str(a)
+        a1=int(a)
+        a1=str(a1)
+        s=len(a1)
+        ot=0
+        for i in (a):
+            ot=ot+(int(i)*(x**s))
+            s=s-1
+        return(ot,0)
+    else:
+        a1=int(a)
+        s=len(a1)
+        ot=0
+        for i in (a):
+            d=i
+            if d=="A":
+                    d="10"
+            elif d=="B":
+                    d="1"
+            elif d=="C":
+                    d="12"
+            elif d=="D":
+                    d="13"
+            elif d=="E":
+                    d="14"
+            else:
+                    d="15"
+            ot=ot+(int(d)*(x**s))
+            s=s-1
+        return(ot,0)
+ja=input()
+jx=int(input())
+a,x=rchange(ja,jx)
+print(a)
